@@ -1,0 +1,263 @@
+#isohu-topbar .isohu-topbar {
+  width: 950px;
+}
+
+#innerToolBar {
+  width: 950px;
+}
+
+#commend-headNav {
+  overflow: hidden;
+  color: #999;
+  font: 14px/24px "\5B8B\4F53";
+  height: 24px;
+  margin: 10px auto 9px;
+  width: 950px;
+}
+
+#commend-headNav a {
+  color: #333333;
+  margin: 0 5px 0 6px;
+  text-decoration: none;
+}
+
+#commend-headNav a.first {
+  margin-left: 0;
+}
+
+#commend-headNav a.last {
+  margin-right: 0;
+}
+
+#commend-headNav a.n3 {
+  margin-right: 6px
+}
+
+#commend-headNav a:hover {
+  color: #CC0000;
+  text-decoration: underline;
+}
+
+.banner {
+  height: 500px;
+}
+/* 标签重定义 */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+.nav-main{
+  height: 250px;
+  background: #7e737b url(../images/ban.jpg) no-repeat center 0;
+  position: relative;
+  margin-bottom: 30px;
+}
+.m-navs{
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color:rgba(0,0,0,.5);
+}
+@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+  .m-navs{
+    background-color:#000000;
+    filter:Alpha(opacity=50);
+    position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+  }
+  .m-navs>div{
+    position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+  }  
+}
+.m-navs>div{
+  width: 1200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+}
+.plane2{
+  float: left;
+
+}
+.m-navs div a{
+  display: inline-block;
+  float: left;
+  height: 60px;
+  margin:0 40px;
+  line-height: 60px;
+  font-size: 20px;
+  color: #fff;
+}
+.m-navs div a:hover{
+  color: #309add;
+}
+.plane{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* 定义关键帧 */
+
+@-webkit-keyframes shade {
+  from {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes shade {
+  from {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes shade {
+  from {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes shade {
+  from {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shade {
+  from {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* picWrap */
+
+#picWrap {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+#picWrap .box {
+  width: 280px;
+  height: auto;
+  padding: 10px;
+  border: none;
+  float: left;
+}
+
+#picWrap .box .info {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 11px #666;
+  background: #fff;
+}
+
+#picWrap .box .info .pic {
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+#picWrap .box .info .pic img {
+  width: 260px;
+  border-radius: 3px;
+}
+
+#picWrap .box .info .title {
+  width: 260px;
+  margin: 0 auto;
+  line-height: 24px;
+  text-indent: 28px;
+  color: #666666;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+#picWrap .box .info .footer {
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 5px;
+  height: 24px;
+}
+
+#picWrap .box .info .footer span {
+  float: right;
+  display: inline-block;
+  line-height: 24px;
+  color: #666666;
+  font-size: 14px;
+}
+
+#picWrap .box .info .zan {
+  width: 260px;
+  margin: 0 auto;
+  height: 80px;
+  position: relative;
+}
+
+#picWrap .box .info .zan a {
+  display: block;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -20px;
+  margin-left: -45px;
+  background-color: #309add;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  text-indent: 32px;
+}
+
+#picWrap .box .info .zan a img {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  margin-top: -11px;
+}

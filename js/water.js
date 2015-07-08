@@ -174,9 +174,8 @@ window.onload = function() {
     }, 999);
     getStartNum = index; //更新请求数据的条数位置
   }
-$(function(){
-  $(".fixFace").click(function(){
-    $("#footer").hide();
+function clickPhoto(){
+   $("#footer").hide();
     $("#container .mid-col").addClass('whiteBg');
     $(".article").hide();
     $("#picWrap").fadeIn(800,function(){
@@ -184,6 +183,4 @@ $(function(){
       //运行瀑布流主函数
       waterFall('picWrap', 'box');
     });
-
-  });
-});
+}

@@ -263,13 +263,6 @@ a {
   top: 50%;
   margin-top: -11px;
 }
-.fixFace{
-  position: fixed;
-    right: 20px;
-  bottom: 20px;
-  z-index: 1000;
-  cursor: pointer;
-}
 #picWrap{
   display: none;
 }

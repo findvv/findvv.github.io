@@ -1,6 +1,5 @@
 window.onload = function() {
-      //运行瀑布流主函数
-      waterFall('picWrap', 'box');
+      
 
       //模拟数据
       var data = [{
@@ -178,6 +177,10 @@ window.onload = function() {
 $(function(){
   $(".fixFace").click(function(){
     $(".article").hide();
-    $("#picWrap").fadeIn(800);
+    $("#picWrap").fadeIn(800,function({
+      //运行瀑布流主函数
+      waterFall('picWrap', 'box');
+    }));
+
   });
 });

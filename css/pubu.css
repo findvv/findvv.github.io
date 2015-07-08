@@ -269,4 +269,4 @@ a {
 #container .whiteBg{
   background: #fff;
 }
-#header .header-menu li:nth-child(2) a { background:#258fb8; } 
+#header .header-menu li:nth-child(2) a { color:#258fb8; } 

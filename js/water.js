@@ -178,6 +178,8 @@ $(function(){
   $(".fixFace").click(function(){
     $(".article").hide();
     $("#picWrap").fadeIn(800,function(){
+      $("#footer").hide();
+      $("#container .mid-col").addClass('whiteBg');
       //运行瀑布流主函数
       waterFall('picWrap', 'box');
     });

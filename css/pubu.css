@@ -273,3 +273,6 @@ a {
 #picWrap{
   display: none;
 }
+#container .whiteBg{
+  background: #fff;
+}

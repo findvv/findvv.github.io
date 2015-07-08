@@ -174,8 +174,10 @@ a {
 #picWrap {
   width: 1200px;
   height: auto;
-  margin: 0 auto;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  z-index: 10;
 }
 
 #picWrap .box {

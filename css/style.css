@@ -708,8 +708,10 @@ a {
 }
 #header .switch-part4 {
   left: 300%;
-  text-align: left;
+  text-align: center;
   line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .duoshuo {
   padding: 0 40px;

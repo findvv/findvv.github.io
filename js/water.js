@@ -4,55 +4,45 @@ window.onload = function() {
 
       //模拟数据
       var data = [{
-        'src': 'images/pic/01.jpg',
+        'src': 'img/pic/01.jpg',
         'title': '一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/02.jpg',
+        'src': 'img/pic/02.jpg',
         'title': '一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/03.jpg',
+        'src': 'img/pic/03.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/04.jpg',
+        'src': 'img/pic/04.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/05.jpg',
+        'src': 'img/pic/05.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/06.jpg',
+        'src': 'img/pic/06.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/07.jpg',
+        'src': 'img/pic/07.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/08.jpg',
+        'src': 'img/pic/08.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/09.jpg',
+        'src': 'img/pic/09.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }, {
-        'src': 'images/pic/10.jpg',
+        'src': 'img/pic/10.jpg',
         'title': '一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程一段忧伤的旅程',
-        'footer':'一段忧伤',
-        'num':'11223'
+        'footer':'一段忧伤'
       }];
 
 
@@ -91,17 +81,6 @@ window.onload = function() {
             footerSpan.innerHTML = data[i].footer;
             footer.appendChild(footerSpan);
             info.appendChild(footer);
-            // 创建点赞按钮
-            var zan = document.createElement('div');
-            zan.className = 'zan';
-            var zanA = document.createElement('a');
-            zanA.setAttribute('href', 'javascript:;');
-            var zanImg = document.createElement('img');
-            zanImg.src = "images/hand.png";
-            zanA.innerHTML = data[i].num;
-            zanA.appendChild(zanImg);
-            zan.appendChild(zanA);
-            info.appendChild(zan);
           }
           waterFall('picWrap', 'box');
         }

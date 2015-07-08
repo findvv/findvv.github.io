@@ -175,3 +175,9 @@ window.onload = function() {
     }, 999);
     getStartNum = index; //更新请求数据的条数位置
   }
+$(function(){
+  $(".fixFace").click(function(){
+    $(".article").hide();
+    $("#picWrap").fadeIn(800);
+  });
+});

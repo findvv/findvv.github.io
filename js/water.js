@@ -96,9 +96,10 @@ window.onload = function() {
       var boxs = getClass(picWrap, box);
       //  2.获得屏幕可显示的列数
       var boxW = boxs[0].offsetWidth;
-      // var colsNum = Math.floor(document.documentElement.clientWidth / boxW);
-      var colsNum = 4;
-      picWrap.style.width = 1400 + 'px'; //为外层赋值宽度
+      var colsNum = Math.floor(document.documentElement.clientWidth / boxW);
+      // var colsNum = 4;
+      picWrap.style.width = boxW * colsNum + 'px'; //为外层赋值宽度
+      // picWrap.style.width = 1400 + 'px'; //为外层赋值宽度
       //  3.循环出所有的box并按照瀑布流排列
       var everyH = []; //定义一个数组存储每一列的高度
       for (var i = 0; i < boxs.length; i++) {

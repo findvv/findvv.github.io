@@ -97,6 +97,9 @@ window.onload = function() {
       //  2.获得屏幕可显示的列数
       var boxW = boxs[0].offsetWidth;
       var colsNum = Math.floor(document.documentElement.clientWidth / boxW);
+      if (colsNum>4) {
+        colsNum = 4;
+      }
       // var colsNum = 4;
       var boxCol = boxW * colsNum;
       picWrap.style.width = boxCol + 'px'; //为外层赋值宽度

@@ -172,11 +172,9 @@ a {
 /* picWrap */
 
 #picWrap {
-  width: 1400px;
   height: auto;
   position: absolute;
   left: 50%;
-  margin-left: -700px;
   z-index: 10;
 }
 

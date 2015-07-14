@@ -108,3 +108,19 @@ require([], function (){
 	}
 	
 });
+function clickPhoto(){
+  if (window.location.href == "http://findvv.github.io/") {
+    $("#footer").hide();
+    $("#container .mid-col").addClass('whiteBg');
+    $(".article").hide();
+    $("#picWrap").fadeIn(800,function(){
+
+      //运行瀑布流主函数
+      waterFall('picWrap', 'box');
+    });
+  }
+  else{
+    window.location.href = "http://findvv.github.io/"
+  }
+   
+}

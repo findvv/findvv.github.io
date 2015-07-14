@@ -181,7 +181,8 @@ window.onload = function() {
     getStartNum = index; //更新请求数据的条数位置
   }
 function clickPhoto(){
-   $("#footer").hide();
+  if (window.location.href == "http://findvv.github.io/") {
+    $("#footer").hide();
     $("#container .mid-col").addClass('whiteBg');
     $(".article").hide();
     $("#picWrap").fadeIn(800,function(){
@@ -189,4 +190,9 @@ function clickPhoto(){
       //运行瀑布流主函数
       waterFall('picWrap', 'box');
     });
+  }
+  else{
+    window.location.href = "http://findvv.github.io/"
+  }
+   
 }

@@ -7,29 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="jquery（2.1.4）源码分析
 
-试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：传送门。争取每天都更新一点，多多学习。
-
-
-第一天首先映入眼帘的是这一些：12345678910111213141516171819202122(function( global, factory ) &amp;#123;  if ( typeof module === &quot;object&quot; &amp;amp;&amp;am">
+试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：传送门。争取每天都更新一点，多多学习。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jquery（2.1.4）源码分析">
 <meta property="og:url" content="http://yoursite.com/2015/10/26/myJquery/index.html">
 <meta property="og:site_name" content="小玩的后花园">
 <meta property="og:description" content="jquery（2.1.4）源码分析
 
-试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：传送门。争取每天都更新一点，多多学习。
-
-
-第一天首先映入眼帘的是这一些：12345678910111213141516171819202122(function( global, factory ) &amp;#123;  if ( typeof module === &quot;object&quot; &amp;amp;&amp;am">
-<meta property="og:updated_time" content="2015-10-26T02:51:08.940Z">
+试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：传送门。争取每天都更新一点，多多学习。">
+<meta property="og:updated_time" content="2015-10-26T03:00:44.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jquery（2.1.4）源码分析">
 <meta name="twitter:description" content="jquery（2.1.4）源码分析
 
-试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：传送门。争取每天都更新一点，多多学习。
-
-
-第一天首先映入眼帘的是这一些：12345678910111213141516171819202122(function( global, factory ) &amp;#123;  if ( typeof module === &quot;object&quot; &amp;amp;&amp;am">
+试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：传送门。争取每天都更新一点，多多学习。">
   
     <link rel="alternative" href="/atom.xml" title="小玩的后花园" type="application/atom+xml">
   
@@ -244,6 +235,7 @@
 <p>试着去分析下常用的jquery库的源码，来提高姿势水平。源码在：<a href="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js" target="_blank" rel="external">传送门</a>。<br>争取每天都更新一点，多多学习。</p>
 </blockquote>
 <hr>
+<a id="more"></a>
 <h1 id="第一天">第一天</h1><p>首先映入眼帘的是这一些：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"> global, factory </span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( <span class="keyword">typeof</span> <span class="built_in">module</span> === <span class="string">"object"</span> &amp;&amp; <span class="keyword">typeof</span> <span class="built_in">module</span>.exports === <span class="string">"object"</span> ) &#123;</span><br><span class="line">    <span class="built_in">module</span>.exports = global.document ?</span><br><span class="line">      factory( global, <span class="literal">true</span> ) :</span><br><span class="line">      <span class="function"><span class="keyword">function</span>(<span class="params"> w </span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ( !w.document ) &#123;</span><br><span class="line">          <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>( <span class="string">"jQuery requires a window with a document"</span> );</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> factory( w );</span><br><span class="line">      &#125;;</span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line">    factory( global );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;(<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">"undefined"</span> ? <span class="built_in">window</span> : <span class="keyword">this</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> window, noGlobal </span>) </span>&#123;</span><br><span class="line">    <span class="comment">//具体实现代码</span></span><br><span class="line">    <span class="keyword">var</span> strundefined = <span class="keyword">typeof</span> <span class="literal">undefined</span>;<span class="comment">//4607行</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> noGlobal === strundefined) &#123;<span class="comment">//9280--9287行</span></span><br><span class="line">        <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = jQuery;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> jQuery;</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure></p>
 <p>看注释可以知道，这些代码是为了适用于CommonJS and CommonJS-like 环境</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">"undefined"</span> ? <span class="built_in">window</span> : <span class="keyword">this</span></span><br></pre></td></tr></table></figure>
